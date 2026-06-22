@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: flightwatcher
+    env: python
+    schedule: "35 8,11,14,17,20,22 * * *"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
